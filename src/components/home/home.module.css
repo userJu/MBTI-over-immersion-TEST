@@ -1,0 +1,33 @@
+.home {
+  width: 90%;
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+}
+.name,
+.desc {
+  margin: 10px;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+}
+.input {
+  border: none;
+  outline: none;
+  border: 3px solid purple;
+  height: 3rem;
+  background-color: transparent;
+}
+.button {
+  border: none;
+  outline: none;
+  border: 2px solid purple;
+  height: 2.5rem;
+  margin: 1.5rem;
+  background-color: transparent;
+}

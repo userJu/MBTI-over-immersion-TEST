@@ -5,7 +5,7 @@ import TestPage from "./components/test_page/test_page";
 import Result from "./components/result/result";
 import QMbti from "./components/test_page/q_mbti";
 
-const AppRouter = (props) => {
+const AppRouter = () => {
   return (
     <BrowserRouter>
       <Routes>

@@ -1,0 +1,24 @@
+.result {
+  width: 90%;
+  height: 70%;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border: 1px solid olivedrab;
+}
+.name {
+  position: absolute;
+  top: 1rem;
+}
+.resultIntro {
+}
+.resultStage {
+  margin: 0;
+  margin: 1.5rem;
+}
+.resultPoint {
+  margin: 0;
+}
