@@ -14,11 +14,11 @@
   top: 1rem;
 }
 .resultIntro {
+  text-align: center;
 }
-.resultStage {
-  margin: 0;
+.resultRes {
   margin: 1.5rem;
 }
-.resultPoint {
-  margin: 0;
+.resultDesc {
+  margin: 1.5rem;
 }

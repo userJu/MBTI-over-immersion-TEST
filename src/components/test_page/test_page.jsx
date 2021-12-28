@@ -10,77 +10,107 @@ const TestPage = () => {
   const [point, setPoint] = useState(0);
   const questionBox = {
     1: {
-      q: "처음 만나는 사람의 mbti를 알면 관계를 형성하는 데 도움이 될 것 같다",
+      q: "처음 만나는 사람의 mbti를 아는 것은",
+      T: "관계를 형성하는 데 도움이 될 것 같다",
+      F: "딱히 도움이 될 것 같지는 않다",
       // O: 3,
       // X: 0,
     },
     2: {
-      q: "세상 사람들이 16가지 유형에 완벽히 들어맞는건 아니지만 mbti는 과학이다",
+      q: "세상 사람들이 16가지 유형에 완벽히 들어맞는건...",
+      T: "아니지만 MBTI는 과학이다",
+      F: "아니고 간단한 심리테스트 같은 종류의 것이다",
       // O: 2,
       // X: 0,
     },
     3: {
-      q: "MBTI는 내 성격을 완벽하게 설명해준다",
+      q: "MBTI는 내 성격을",
+      T: "잘 설명해준다",
+      F: "설명해주지 못한다",
       // O: 2,
       // X: 0,
     },
     4: {
-      q: "주변사람들이 나보고 MBTI에 과몰입한다고 한다",
+      q: "주변사람들이 나보고 MBTI에",
+      T: "진심이라고 한다",
+      F: "별 말 없다",
       // O: 2,
       // X: 0,
     },
     5: {
-      q: "솔직히 과몰입이긴 하지만 재밌다",
+      q: "본인이 MBTI에",
+      T: "관심이 많다고 생각한다",
+      F: "부정적이라고 생각한다",
       // O: 2,
       // X: 0,
     },
     6: {
-      q: "각종 mbti들의 특징들을 잘 안다",
+      q: "각종 mbti가 가진 성격의 특성들을",
+      T: "잘 알고 있다",
+      F: "잘 모르고 있다",
       // O: 3,
       // X: 0,
     },
     7: {
-      q: "특정 MBTI 유형의 사람이 좋아하는/싫어하는 행동을 검색해본 적 있다",
+      q: "특정 MBTI 유형의 사람이 좋아하는/싫어하는 행동이",
+      T: "궁금했던 적이 있다",
+      F: "궁금했던 적은 없다",
       // O: 3,
       // X: 0,
     },
     8: {
-      q: " 특정 mbti 사람들이 가진 특정 성격은 나랑 잘 안맞는 것 같다",
+      q: "특정 mbti 사람들이 가진 성격 유형은",
+      T: "나랑 잘 맞지 않는 것 같다",
+      F: "생각해본 적 없다",
       // O: 3,
       // X: 0,
     },
     9: {
-      q: "mbti별 진로, mbti별 소득 등을 찾아본 적 있다",
+      q: "mbti별 진로, mbti별 소득 등이",
+      T: "궁금하다",
+      F: "전혀 궁금하지 않다",
       // O: 2,
       // X: 0,
     },
     10: {
-      q: "mbti 얘기가 지겹다/싫다",
+      q: "mbti에 관련된 이야기를 하는 것은",
+      T: "재미있다",
+      F: "지루하다",
       // O: 0,
       // X: -1,
     },
     11: {
-      q: "주변에서 mbti 이야기좀 그만 했으면 좋겠다",
+      q: "주변에서 mbti 이야기를",
+      T: "많이 하긴 하지만 재미있다",
+      F: "너무 많이 해서 지겹다",
       // O: 0,
       // X: -2,
     },
     12: {
-      q: "mbti 이야기하는 사람들 보면 바보같아 보인다",
+      q: "mbti 이야기하는 사람들을 보면",
+      T: "재미있어 보인다",
+      F: "바보같아 보인다",
       // O: 0,
       // X: -3,
     },
     13: {
-      q: "재미로 mbti 관련된 유투브 영상들을 찾아본다",
+      q: "mbti와 관련된 영상이나 글을",
+      T: "자주 찾아보는 편이다",
+      F: "관심있게 보지 않는다",
       // O: 2,
       // X: -1,
     },
     14: {
-      q: "mbti에 몰입하는 사람들이 이해된다",
+      q: "내 MBTI 유형이 가진 성격 특징처럼",
+      T: "보이고 싶다",
+      F: "보이든 말든 상관없다",
       // O: 1,
       // X: -1,
     },
     15: {
-      q: "mbti를 무시하는 사람은 대체로 t 인것 같다",
+      q: "mbti를 무시하는 사람을 보면",
+      T: "특정 MBTI 성향을 가졌을 가능성이 높다고 생각한다",
+      F: "그 의견에 대체 동의하는 편이다",
       // O: 1,
       // X: -1,
     },
@@ -93,11 +123,9 @@ const TestPage = () => {
   const onClick = (e) => {
     setCurrentQ((prev) => prev + 1);
     if (currentQ < 15) {
-      if (e.target.innerHTML === "O") {
-        console.log(1);
+      if (e.target.value === "O") {
         setPoint((prev) => prev + 1);
       } else {
-        console.log(-1);
         setPoint((prev) => prev - 1);
       }
     } else {
@@ -123,11 +151,11 @@ const TestPage = () => {
       buton을 클릭하면 문제에 해당하는 점수가 할당되고 다음 문제로 넘어가게 한다 
       동시에 progressbar가 진행*/}
       <div className={styles.btns}>
-        <button className={styles.btn} onClick={onClick}>
-          O
+        <button className={styles.btn} onClick={onClick} value={"O"}>
+          {questionBox[currentQ].T}
         </button>
-        <button className={styles.btn} onClick={onClick}>
-          X
+        <button className={styles.btn} onClick={onClick} value={"X"}>
+          {questionBox[currentQ].F}
         </button>
       </div>
       {/* 모든 질문이 끝나면
