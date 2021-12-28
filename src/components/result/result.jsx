@@ -63,7 +63,7 @@ const Result = (props) => {
       </h3>
       <h2 className={styles.resultRes}>{paper.res}</h2>
       <h3 className={styles.resultDesc}>{paper.desc}</h3>
-      <Graph />
+      <Graph point={point} mbti={mbti} />
     </section>
   );
 };
