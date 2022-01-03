@@ -6,6 +6,7 @@ import styles from "./result.module.css";
 const Result = (props) => {
   const location = useLocation();
   const [paper, setPaper] = useState("");
+  const [pointRange, setPointRange] = useState("");
   const user = location.state.user;
   const point = location.state.point;
   const mbti = location.state.mbti;
@@ -38,18 +39,23 @@ const Result = (props) => {
     if (point >= 10) {
       console.log("MBTI");
       setPaper(result[0]);
+      setPointRange(1);
     } else if (point > 3) {
       console.log("찐");
       setPaper(result[1]);
+      setPointRange(2);
     } else if (point >= -3) {
       console.log("MILD");
       setPaper(result[2]);
+      setPointRange(3);
     } else if (point > -10) {
       console.log("soso");
       setPaper(result[3]);
+      setPointRange(4);
     } else {
       console.log("정상");
       setPaper(result[4]);
+      setPointRange(5);
     }
   }, []);
   console.log(paper);
@@ -63,7 +69,7 @@ const Result = (props) => {
       </h3>
       <h2 className={styles.resultRes}>{paper.res}</h2>
       <h3 className={styles.resultDesc}>{paper.desc}</h3>
-      <Graph point={point} mbti={mbti} />
+      <Graph point={point} pointRange={pointRange} mbti={mbti} />
     </section>
   );
 };

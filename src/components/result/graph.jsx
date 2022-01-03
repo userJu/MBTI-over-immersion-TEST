@@ -1,20 +1,28 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { collection, addDoc, getDocs } from "firebase/firestore";
 import { app, db } from "../../fireB";
 
-const Graph = ({ point, mbti }) => {
-  console.log(mbti, point);
+const Graph = ({ point, mbti, pointRange }) => {
+  const [targetMbtis, setTargetMbtis] = useState([]);
+  const resultArr = [];
+
   useEffect(async (e) => {
     const docRef = await addDoc(collection(db, "results"), {
       mbti,
       point,
+      Range: pointRange,
     });
     const querySnapshot = await getDocs(collection(db, "results"));
     querySnapshot.forEach((res) => {
-      console.log(res.data().mbti);
-      console.log(res.data().point);
+      if (res.data().Range === pointRange) {
+        resultArr.push(res.data());
+        console.log(res.data().mbti);
+        // const resMbti = res.data().mbti;
+        // setTargetMbtis([resMbti]);
+      }
     });
   }, []);
+  console.log(resultArr);
 
   return (
     <section>
