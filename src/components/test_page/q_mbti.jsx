@@ -1,15 +1,36 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
+import { collection, addDoc, getDocs } from "firebase/firestore";
+import { app, db } from "../../fireB";
 import styles from "./q_mbti.module.css";
 
 const QMbti = () => {
   const location = useLocation();
   const navigate = useNavigate();
   const [mbti, setMbti] = useState("");
+  const [pointRange, setPointRange] = useState("");
   const user = location.state.user;
   const point = location.state.point;
-  const onClick = () => {
-    navigate("/result", { state: { user, point, mbti } });
+  useEffect(() => {
+    if (point >= 10) {
+      setPointRange(1);
+    } else if (point > 3) {
+      setPointRange(2);
+    } else if (point >= -3) {
+      setPointRange(3);
+    } else if (point > -10) {
+      setPointRange(4);
+    } else {
+      setPointRange(5);
+    }
+  }, []);
+  const onClick = async () => {
+    navigate("/result", { state: { user, point, pointRange, mbti } });
+    const docRef = await addDoc(collection(db, "results"), {
+      mbti,
+      point,
+      Range: pointRange,
+    });
   };
   const chooseMbti = (e) => {
     console.dir(e.target.innerHTML);
