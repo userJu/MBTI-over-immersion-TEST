@@ -2,6 +2,8 @@
   "name": "mbti-over-immersion-test",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://userJu.github.io/MBTI-over-immersion-TEST",
+
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.4",
     "@testing-library/jest-dom": "^5.16.1",
@@ -41,6 +43,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "homepage": "https://userJu.github.io/MBTI-over-immersion-TEST"
+  }
 }
