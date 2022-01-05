@@ -1,0 +1,20 @@
+.graph {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.openBtn {
+  border: none;
+  outline: none;
+  background-color: #f7bf20;
+  color: white;
+  border-radius: 1rem;
+  width: 6rem;
+  height: 2rem;
+}
+
+h3,
+h5 {
+  margin: 0;
+}

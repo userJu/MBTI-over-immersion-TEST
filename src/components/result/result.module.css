@@ -1,23 +1,24 @@
 .result {
   width: 90%;
-  height: 70%;
+  height: 100%;
   display: flex;
   position: relative;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   position: relative;
-  border: 1px solid olivedrab;
+  background-color: #c5ffd5;
 }
 .name {
   position: absolute;
-  top: 1rem;
+  top: 5rem;
 }
 .resultIntro {
   text-align: center;
 }
 .resultRes {
-  margin: 1.5rem;
+  margin: 0.8rem;
+  margin-bottom: 0;
 }
 .resultDesc {
   margin: 1.5rem;

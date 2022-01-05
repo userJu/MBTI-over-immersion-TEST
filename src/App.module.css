@@ -1,5 +1,7 @@
 body {
   margin: 0;
+  background-color: #54be9f;
+  /* f3e9e7; */
 }
 * {
   box-sizing: border-box;
@@ -11,7 +13,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: pink;
 }
 
 h1 {

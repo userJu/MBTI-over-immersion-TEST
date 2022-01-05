@@ -6,12 +6,12 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: white;
+  background-color: #54be9f;
   position: relative;
 }
 .desc {
   position: absolute;
-  top: 1rem;
+  top: 0.1rem;
   text-align: center;
 }
 .mbtiBox {
@@ -21,7 +21,7 @@
   margin-bottom: 2rem;
 }
 .mbti {
-  background-color: pink;
+  background-color: #c5ffd5;
   margin: 0.2rem;
   display: flex;
   align-items: center;
@@ -29,12 +29,14 @@
   border-radius: 10px;
 }
 .mbti:hover {
-  background-color: rgb(235, 147, 162);
+  background-color: #78d191;
 }
 
 .resultBtn {
   outline: none;
-  background-color: transparent;
+  border: none;
+  background-color: #f7bf20;
+  border-radius: 1rem;
   width: 6rem;
   height: 2rem;
 }
