@@ -1,17 +1,22 @@
 .result {
   width: 90%;
-  height: 100%;
   display: flex;
-  position: relative;
   flex-direction: column;
   align-items: center;
+  background-color: #c5ffd5;
+  box-sizing: content-box;
+  margin: 5rem 0;
+}
+.nameBox {
+  width: 100%;
+  height: 20vh;
+  display: flex;
   justify-content: center;
   position: relative;
-  background-color: #c5ffd5;
 }
 .name {
   position: absolute;
-  top: 5rem;
+  top: 3rem;
 }
 .resultIntro {
   text-align: center;

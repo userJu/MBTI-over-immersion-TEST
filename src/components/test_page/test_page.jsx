@@ -132,14 +132,13 @@ const TestPage = () => {
       navigate("/mbti", { state: { user, point } });
     }
   };
-  console.log(point);
   useEffect(() => {
     setUser(location.state.name);
   }, []);
 
   return (
     <section className={styles.test}>
-      <div className={styles.progress}>ProgressBar {currentQ}/15</div>
+      <div className={styles.progress}>Progress {currentQ}/15</div>
       <div className={styles.questionBox}>
         {currentQ <= 15 ? (
           <h3 className={styles.question}>{questionBox[currentQ].q}</h3>

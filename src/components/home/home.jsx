@@ -9,6 +9,7 @@ const Home = (props) => {
   const navigate = useNavigate();
   const onSubmit = (e) => {
     e.preventDefault();
+
     navigate("/test", { state: { name: userName } });
   };
   const onChange = (e) => {

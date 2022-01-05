@@ -1,19 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap");
+
 .QMbti {
   width: 90%;
-  height: 70%;
+  height: 100vh;
   display: flex;
   position: relative;
   flex-direction: column;
   align-items: center;
+  text-align: center;
   justify-content: center;
   background-color: #54be9f;
   position: relative;
 }
 .desc {
-  position: absolute;
-  top: 0.1rem;
-  text-align: center;
+  color: #c5ffd5;
 }
+
 .mbtiBox {
   display: grid;
   grid-template-columns: 4rem 4rem 4rem 4rem;
@@ -27,6 +29,7 @@
   align-items: center;
   justify-content: center;
   border-radius: 10px;
+  font-weight: bold;
 }
 .mbti:hover {
   background-color: #78d191;
@@ -39,4 +42,7 @@
   border-radius: 1rem;
   width: 6rem;
   height: 2rem;
+  color: white;
+  font-family: "Noto Sans KR", sans-serif;
+  font-weight: bold;
 }

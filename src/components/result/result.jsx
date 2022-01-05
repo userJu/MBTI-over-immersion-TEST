@@ -39,7 +39,9 @@ const Result = (props) => {
 
   return (
     <section className={styles.result}>
-      <h1 className={styles.name}>Result</h1>
+      <div className={styles.nameBox}>
+        <h1 className={styles.name}>Result</h1>
+      </div>
       <h3 className={styles.resultIntro}>
         {user}님의 MBTI 과몰입 정도는
         <hr />

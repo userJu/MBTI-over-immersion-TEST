@@ -25,15 +25,18 @@ const QMbti = () => {
     }
   }, []);
   const onClick = async () => {
-    navigate("/result", { state: { user, point, pointRange, mbti } });
-    const docRef = await addDoc(collection(db, "results"), {
-      mbti,
-      point,
-      Range: pointRange,
-    });
+    if (mbti === "") {
+      alert("MBTI를 선택해주세요");
+    } else {
+      navigate("/result", { state: { user, point, pointRange, mbti } });
+      const docRef = await addDoc(collection(db, "results"), {
+        mbti,
+        point,
+        Range: pointRange,
+      });
+    }
   };
   const chooseMbti = (e) => {
-    console.dir(e.target.innerHTML);
     setMbti(e.target.innerHTML);
   };
   return (
