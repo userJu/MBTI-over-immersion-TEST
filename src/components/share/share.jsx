@@ -39,6 +39,14 @@ const Share = (props) => {
       alert("복사 실패");
     }
   };
+
+  const twitterBtnClick = () => {
+    const sendText = "MBTI 과몰입 테스트";
+    const sendUrl = "https://userju.github.io/MBTI-over-immersion-TEST/";
+    window.open(
+      `https://twitter.com/intent/tweet?text=${sendText}&url=${sendUrl}`
+    );
+  };
   return (
     <section className={styles.share}>
       <h1 className={styles.name}>share link!</h1>
@@ -48,8 +56,7 @@ const Share = (props) => {
           <img src="https://developers.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_medium.png" />
         </button>
         <button onClick={linkBtnClick}>link</button>
-        <li>instagram</li>
-        <li>twitter</li>
+        <button onClick={twitterBtnClick}>twitter</button>
       </ul>
     </section>
   );
