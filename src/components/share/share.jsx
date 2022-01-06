@@ -3,10 +3,9 @@ import styles from "./share.module.css";
 import twitter from "../../images/twitterBtn.png";
 import kakao from "../../images/kakaoBtn.jpg";
 import link from "../../images/linkBtn.jpg";
+import { useNavigate } from "react-router-dom";
 
 const Share = (props) => {
-  console.dir(window.Kakao);
-  console.log(window.Kakao.isInitialized());
   // 여기서부터는 그냥 Kakao가 아니라 window.Kakao가 되어야 한다
 
   // useEffect(() => {
@@ -24,13 +23,11 @@ const Share = (props) => {
   //     webUrl: "https://userju.github.io/MBTI-over-immersion-TEST/",
   //   },
   // },
-  console.dir(window.location.href);
   const kakaoBtnClick = () => {
     window.Kakao.Link.sendCustom({
       templateId: 68225,
     });
   };
-  console.dir(window.Kakao.Link.sendCustom);
 
   const linkBtnClick = async () => {
     try {
@@ -50,6 +47,11 @@ const Share = (props) => {
       `https://twitter.com/intent/tweet?text=${sendText}&url=${sendUrl}`
     );
   };
+  const navigate = useNavigate();
+  const returnBtnClick = () => {
+    console.log("다시처음으로");
+    navigate("/");
+  };
 
   return (
     <section className={styles.share}>
@@ -66,7 +68,9 @@ const Share = (props) => {
           <img src={twitter} />
         </button>
       </ul>
-      <button className={styles.againBtn}>다시 시작하기</button>
+      <button className={styles.againBtn} onClick={returnBtnClick}>
+        다시 시작하기
+      </button>
     </section>
   );
 };

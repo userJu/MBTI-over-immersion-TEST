@@ -1,10 +1,15 @@
 import React from "react";
-import AdfitWebComponent from "react-adfit-web-component";
 
-class KakaoAd extends React.Component {
-  render() {
-    return <AdfitWebComponent adUnit="DAN-ggNn69Fkbjecch6F" />;
-  }
-}
-
+const KakaoAd = (props) => {
+  return (
+    <div>
+      <ins
+        className="kakao_ad_area"
+        data-ad-unit="DAN-ggNn69Fkbjecch6F"
+        data-ad-width="320"
+        data-ad-height="100"
+      ></ins>
+    </div>
+  );
+};
 export default KakaoAd;

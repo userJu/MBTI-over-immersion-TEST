@@ -133,6 +133,7 @@ const TestPage = () => {
       navigate("/mbti", { state: { user, point } });
     }
   };
+
   useEffect(() => {
     setUser(location.state.name);
   }, []);

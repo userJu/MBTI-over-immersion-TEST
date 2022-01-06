@@ -36,8 +36,6 @@ const Graph = ({ point, mbti, pointRange }) => {
       <button className={styles.openBtn} onClick={onClick}>
         수치 보기
       </button>
-      <KakaoAd />
-
       {openRes && (
         <div className={styles.openedBox}>
           <h2 className={styles.testProgress}>
