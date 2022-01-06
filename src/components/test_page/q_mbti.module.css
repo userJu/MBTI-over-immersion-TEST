@@ -30,9 +30,13 @@
   justify-content: center;
   border-radius: 10px;
   font-weight: bold;
+  cursor: pointer;
 }
 .mbti:hover {
   background-color: #78d191;
+}
+.actived {
+  width: 200px;
 }
 
 .resultBtn {

@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap");
+
 .share {
   margin-top: 5rem;
   display: flex;
@@ -20,4 +22,26 @@ ul {
   flex-direction: row;
   justify-content: space-around;
   width: 100%;
+  margin-top: 1rem;
+}
+button {
+  outline: none;
+  border: none;
+  background-color: transparent;
+}
+img {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+}
+.againBtn {
+  border: none;
+  outline: none;
+  background-color: #f7bf20;
+  color: white;
+  border-radius: 1rem;
+  width: 8rem;
+  height: 2rem;
+  margin-top: 1rem;
+  font-family: "Noto Sans KR", sans-serif;
 }

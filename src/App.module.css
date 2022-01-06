@@ -3,8 +3,6 @@ body {
   margin: 0;
   background-color: #54be9f;
   font-family: "Noto Sans KR", sans-serif;
-
-  /* f3e9e7; */
 }
 * {
   box-sizing: border-box;
@@ -20,10 +18,16 @@ body {
 
 h1 {
   font-size: 1.2rem;
+  cursor: default;
 }
 h2 {
   font-size: 1rem;
+  cursor: default;
 }
 h3 {
   font-size: 0.6rem;
+  cursor: default;
+}
+button {
+  cursor: pointer;
 }

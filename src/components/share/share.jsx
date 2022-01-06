@@ -1,5 +1,8 @@
 import React, { useEffect } from "react";
 import styles from "./share.module.css";
+import twitter from "../../images/twitterBtn.png";
+import kakao from "../../images/kakaoBtn.jpg";
+import link from "../../images/linkBtn.jpg";
 
 const Share = (props) => {
   console.dir(window.Kakao);
@@ -47,17 +50,23 @@ const Share = (props) => {
       `https://twitter.com/intent/tweet?text=${sendText}&url=${sendUrl}`
     );
   };
+
   return (
     <section className={styles.share}>
       <h1 className={styles.name}>share link!</h1>
       <h3 className={styles.desc}>공유할수록 수치는 정확해집니다</h3>
       <ul className={styles.linkBox}>
-        <button onClick={kakaoBtnClick}>
-          <img src="https://developers.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_medium.png" />
+        <button className={styles.kakao} onClick={kakaoBtnClick}>
+          <img src={kakao} />
         </button>
-        <button onClick={linkBtnClick}>link</button>
-        <button onClick={twitterBtnClick}>twitter</button>
+        <button className={styles.link} onClick={linkBtnClick}>
+          <img src={link} />
+        </button>
+        <button className={styles.twitter} onClick={twitterBtnClick}>
+          <img src={twitter} />
+        </button>
       </ul>
+      <button className={styles.againBtn}>다시 시작하기</button>
     </section>
   );
 };

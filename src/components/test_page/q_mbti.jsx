@@ -24,6 +24,7 @@ const QMbti = () => {
       setPointRange(5);
     }
   }, []);
+
   const onClick = async () => {
     if (mbti === "") {
       alert("MBTI를 선택해주세요");
@@ -38,61 +39,33 @@ const QMbti = () => {
       });
     }
   };
-  const chooseMbti = (e) => {
-    setMbti(e.target.innerHTML);
+  const chooseMbtiBox = (e) => {
+    if (e.target.id !== "mbtiBox") {
+      setMbti(e.target.innerHTML);
+    } else {
+      return;
+    }
   };
   return (
     <section className={styles.QMbti}>
       <h1 className={styles.desc}>what is {user}'s mbti?</h1>
-      <div className={styles.mbtiBox}>
-        <div className={styles.mbti} onClick={chooseMbti}>
-          ISTJ
-        </div>
-        <div className={styles.mbti} onClick={chooseMbti}>
-          ISFJ
-        </div>
-        <div className={styles.mbti} onClick={chooseMbti}>
-          INFJ
-        </div>
-        <div className={styles.mbti} onClick={chooseMbti}>
-          INTJ
-        </div>
-        <div className={styles.mbti} onClick={chooseMbti}>
-          ISTP
-        </div>
-        <div className={styles.mbti} onClick={chooseMbti}>
-          ISFP
-        </div>
-        <div className={styles.mbti} onClick={chooseMbti}>
-          INFP
-        </div>
-        <div className={styles.mbti} onClick={chooseMbti}>
-          INTP
-        </div>
-        <div className={styles.mbti} onClick={chooseMbti}>
-          ESTP
-        </div>
-        <div className={styles.mbti} onClick={chooseMbti}>
-          ESFP
-        </div>
-        <div className={styles.mbti} onClick={chooseMbti}>
-          ENFP
-        </div>
-        <div className={styles.mbti} onClick={chooseMbti}>
-          ENTP
-        </div>
-        <div className={styles.mbti} onClick={chooseMbti}>
-          ESTJ
-        </div>
-        <div className={styles.mbti} onClick={chooseMbti}>
-          ESFJ
-        </div>
-        <div className={styles.mbti} onClick={chooseMbti}>
-          ENFJ
-        </div>
-        <div className={styles.mbti} onClick={chooseMbti}>
-          ENTJ
-        </div>
+      <div className={styles.mbtiBox} onClick={chooseMbtiBox} id="mbtiBox">
+        <div className={styles.mbti}>ISTJ</div>
+        <div className={styles.mbti}>ISFJ</div>
+        <div className={styles.mbti}>INFJ</div>
+        <div className={styles.mbti}>INTJ</div>
+        <div className={styles.mbti}>ISTP</div>
+        <div className={styles.mbti}>ISFP</div>
+        <div className={styles.mbti}>INFP</div>
+        <div className={styles.mbti}>INTP</div>
+        <div className={styles.mbti}>ESTP</div>
+        <div className={styles.mbti}>ESFP</div>
+        <div className={styles.mbti}>ENFP</div>
+        <div className={styles.mbti}>ENTP</div>
+        <div className={styles.mbti}>ESTJ</div>
+        <div className={styles.mbti}>ESFJ</div>
+        <div className={styles.mbti}>ENFJ</div>
+        <div className={styles.mbti}>ENTJ</div>
       </div>
       <button className={styles.resultBtn} onClick={onClick}>
         결과 보기
