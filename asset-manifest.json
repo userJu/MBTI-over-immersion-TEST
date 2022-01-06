@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/MBTI-over-immersion-TEST/static/css/main.f809b5de.css",
-    "main.js": "/MBTI-over-immersion-TEST/static/js/main.ce43ef00.js",
+    "main.js": "/MBTI-over-immersion-TEST/static/js/main.adde319f.js",
     "index.html": "/MBTI-over-immersion-TEST/index.html",
     "main.f809b5de.css.map": "/MBTI-over-immersion-TEST/static/css/main.f809b5de.css.map",
-    "main.ce43ef00.js.map": "/MBTI-over-immersion-TEST/static/js/main.ce43ef00.js.map"
+    "main.adde319f.js.map": "/MBTI-over-immersion-TEST/static/js/main.adde319f.js.map"
   },
   "entrypoints": [
     "static/css/main.f809b5de.css",
-    "static/js/main.ce43ef00.js"
+    "static/js/main.adde319f.js"
   ]
 }
