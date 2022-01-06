@@ -28,7 +28,9 @@ const QMbti = () => {
     if (mbti === "") {
       alert("MBTI를 선택해주세요");
     } else {
-      navigate("/result", { state: { user, point, pointRange, mbti } });
+      navigate("/result", {
+        state: { user, point, pointRange, mbti },
+      });
       const docRef = await addDoc(collection(db, "results"), {
         mbti,
         point,

@@ -9,6 +9,7 @@ const Graph = ({ point, mbti, pointRange }) => {
   const [sameRangeArr, setSameRangeArr] = useState([]);
   const [sameMbtiArr, setSameMbtiArr] = useState([]);
   const [openRes, setOpenRes] = useState(false);
+  const [createdInfo, setCreatedInfo] = useState("");
 
   let arr = [];
   useEffect(async (e) => {

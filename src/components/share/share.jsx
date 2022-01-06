@@ -21,13 +21,24 @@ const Share = (props) => {
   //     webUrl: "https://userju.github.io/MBTI-over-immersion-TEST/",
   //   },
   // },
-  console.dir(window.Kakao.Link.sendCustom);
+  console.dir(window.location.href);
   const kakaoBtnClick = () => {
     window.Kakao.Link.sendCustom({
       templateId: 68225,
     });
   };
   console.dir(window.Kakao.Link.sendCustom);
+
+  const linkBtnClick = async () => {
+    try {
+      await navigator.clipboard.writeText(
+        "https://userju.github.io/MBTI-over-immersion-TEST/"
+      );
+      alert("복사되었습니다");
+    } catch (error) {
+      alert("복사 실패");
+    }
+  };
   return (
     <section className={styles.share}>
       <h1 className={styles.name}>share link!</h1>
@@ -36,7 +47,7 @@ const Share = (props) => {
         <button onClick={kakaoBtnClick}>
           <img src="https://developers.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_medium.png" />
         </button>
-        <li>link</li>
+        <button onClick={linkBtnClick}>link</button>
         <li>instagram</li>
         <li>twitter</li>
       </ul>
