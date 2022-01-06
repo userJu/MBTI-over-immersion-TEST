@@ -1,3 +1,4 @@
+import React from "react";
 import styles from "./App.module.css";
 import KakaoAd from "./components/ad/kakaoAdFooter";
 import KakaoAdMobile from "./components/ad/kakaoAdMobile";
@@ -8,10 +9,8 @@ function App() {
   return (
     <div className={styles.app}>
       <KakaoAd />
-      <KakaoAdMobile />
       <AppRouter />
       <KakaoAdMobile />
-      <KakaoAd />
     </div>
   );
 }
