@@ -39,3 +39,6 @@
   font-family: "Noto Sans KR", sans-serif;
   font-weight: bold;
 }
+.kakao_ad_area {
+  display: none;
+}

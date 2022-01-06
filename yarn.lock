@@ -7701,6 +7701,11 @@
     "iconv-lite" "0.4.24"
     "unpipe" "1.0.0"
 
+"react-adfit-web-component@^1.0.2":
+  "integrity" "sha512-mHcsdd63LuebegYhUJbbwOktaMfzyUZmUkz+0uOaJJ2ri2U/nLLV3tttTb+yyMRMcwVGmJWH2IAmo5ljU4TB1g=="
+  "resolved" "https://registry.npmjs.org/react-adfit-web-component/-/react-adfit-web-component-1.0.2.tgz"
+  "version" "1.0.2"
+
 "react-app-polyfill@^3.0.0":
   "integrity" "sha512-sZ41cxiU5llIB003yxxQBYrARBqe0repqPTTYBTmMqTz9szeBbE37BehCE891NZsmdZqqP+xWKdT3eo3vOzN8w=="
   "resolved" "https://registry.npmjs.org/react-app-polyfill/-/react-app-polyfill-3.0.0.tgz"

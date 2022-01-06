@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import AppRouter from "../../router";
+import KakaoAd from "../ad/kakaoAdFooter";
+import KakaoAdFooter from "../ad/kakaoAdFooter";
 import TestPage from "../test_page/test_page";
 import styles from "./home.module.css";
 

@@ -3,6 +3,7 @@ import { collection, addDoc, getDocs } from "firebase/firestore";
 import { app, db } from "../../fireB";
 import styles from "./graph.module.css";
 import Share from "../share/share";
+import KakaoAd from "../ad/kakaoAdFooter";
 
 const Graph = ({ point, mbti, pointRange }) => {
   const [testArray, setTestArray] = useState([]); // 전체 test를 한 사람들의 모든 배열
@@ -35,6 +36,8 @@ const Graph = ({ point, mbti, pointRange }) => {
       <button className={styles.openBtn} onClick={onClick}>
         수치 보기
       </button>
+      <KakaoAd />
+
       {openRes && (
         <div className={styles.openedBox}>
           <h2 className={styles.testProgress}>

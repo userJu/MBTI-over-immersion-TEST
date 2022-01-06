@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
+import KakaoAd from "../ad/kakaoAdFooter";
 import styles from "./test_page.module.css";
 
 const TestPage = () => {
@@ -146,9 +147,7 @@ const TestPage = () => {
           <h1>Loading</h1>
         )}
       </div>
-      {/* 문제와 문제의 점수를 객체로 가지고 와서
-      buton을 클릭하면 문제에 해당하는 점수가 할당되고 다음 문제로 넘어가게 한다 
-      동시에 progressbar가 진행*/}
+
       <div className={styles.btns}>
         <button className={styles.btn} onClick={onClick} value={"O"}>
           {questionBox[currentQ].T}
@@ -157,9 +156,7 @@ const TestPage = () => {
           {questionBox[currentQ].F}
         </button>
       </div>
-      {/* 모든 질문이 끝나면
-      1. 바로 결과페이지로 넘어간다 (if이용해서 하면 될듯)O
-      2. 결과 확인하기 버튼을 만든다 */}
+      <KakaoAd />
     </section>
   );
 };

@@ -3,6 +3,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 import { collection, addDoc, getDocs } from "firebase/firestore";
 import { app, db } from "../../fireB";
 import styles from "./q_mbti.module.css";
+import KakaoAd from "../ad/kakaoAdFooter";
 
 const QMbti = () => {
   const location = useLocation();
@@ -48,6 +49,8 @@ const QMbti = () => {
   };
   return (
     <section className={styles.QMbti}>
+      <KakaoAd />
+
       <h1 className={styles.desc}>what is {user}'s mbti?</h1>
       <div className={styles.mbtiBox} onClick={chooseMbtiBox} id="mbtiBox">
         <div className={styles.mbti}>ISTJ</div>
@@ -67,6 +70,8 @@ const QMbti = () => {
         <div className={styles.mbti}>ENFJ</div>
         <div className={styles.mbti}>ENTJ</div>
       </div>
+      <KakaoAd />
+
       <button className={styles.resultBtn} onClick={onClick}>
         결과 보기
       </button>
