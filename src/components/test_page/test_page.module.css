@@ -21,6 +21,10 @@
   width: 90%;
   height: 40%;
 }
+.question {
+  font-size: 1rem;
+  text-align: center;
+}
 .btns {
   display: flex;
   flex-direction: column;
