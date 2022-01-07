@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/MBTI-over-immersion-TEST/static/css/main.83eea9b5.css",
-    "main.js": "/MBTI-over-immersion-TEST/static/js/main.9146327b.js",
+    "main.css": "/MBTI-over-immersion-TEST/static/css/main.2d3d32e1.css",
+    "main.js": "/MBTI-over-immersion-TEST/static/js/main.7bf17e6d.js",
     "static/media/kakaoBtn.jpg": "/MBTI-over-immersion-TEST/static/media/kakaoBtn.840e6d4d823af7cc360e.jpg",
     "static/media/twitterBtn.png": "/MBTI-over-immersion-TEST/static/media/twitterBtn.b3e6affd049e1e4cc045.png",
     "static/media/linkBtn.jpg": "/MBTI-over-immersion-TEST/static/media/linkBtn.9a50b75001600a3f8038.jpg",
     "index.html": "/MBTI-over-immersion-TEST/index.html",
-    "main.83eea9b5.css.map": "/MBTI-over-immersion-TEST/static/css/main.83eea9b5.css.map",
-    "main.9146327b.js.map": "/MBTI-over-immersion-TEST/static/js/main.9146327b.js.map"
+    "main.2d3d32e1.css.map": "/MBTI-over-immersion-TEST/static/css/main.2d3d32e1.css.map",
+    "main.7bf17e6d.js.map": "/MBTI-over-immersion-TEST/static/js/main.7bf17e6d.js.map"
   },
   "entrypoints": [
-    "static/css/main.83eea9b5.css",
-    "static/js/main.9146327b.js"
+    "static/css/main.2d3d32e1.css",
+    "static/js/main.7bf17e6d.js"
   ]
 }
