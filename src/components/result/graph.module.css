@@ -4,6 +4,11 @@
   flex-direction: column;
   align-items: center;
 }
+.arrow {
+  color: #f7bf20;
+  font-size: 2rem;
+  margin: 0px;
+}
 
 .openBtn {
   border: none;
@@ -14,13 +19,13 @@
   width: 6rem;
   height: 2rem;
   margin: 3rem;
+  margin-top: 0;
   font-family: "Noto Sans KR", sans-serif;
 }
 .openedBox {
   text-align: center;
 }
-h2,
-h4 {
+h2 {
   margin: 0;
 }
 .testProgress {

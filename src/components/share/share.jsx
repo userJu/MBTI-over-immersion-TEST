@@ -49,7 +49,6 @@ const Share = (props) => {
   };
   const navigate = useNavigate();
   const returnBtnClick = () => {
-    console.log("다시처음으로");
     navigate("/");
   };
 
@@ -68,6 +67,11 @@ const Share = (props) => {
           <img src={twitter} />
         </button>
       </ul>
+      <ins
+        data-ad-unit="DAN-ggNn69Fkbjecch6F"
+        data-ad-width="320"
+        data-ad-height="100"
+      ></ins>
       <button className={styles.againBtn} onClick={returnBtnClick}>
         다시 시작하기
       </button>

@@ -23,9 +23,17 @@
   font-size: 1rem;
 }
 .resultRes {
-  margin: 0.8rem;
-  margin-bottom: 0;
+  margin: 1rem;
 }
 .resultDesc {
-  margin: 1.5rem;
+  margin: 1rem 1.5rem;
+  font-size: 0.8rem;
+  background-color: #81ec9f;
+  padding: 0.2rem 0.5rem;
+  border-radius: 0.3rem;
+  color: #2d8168;
+}
+.resultDescription {
+  white-space: pre-wrap;
+  margin: 0.5rem 1.5rem;
 }

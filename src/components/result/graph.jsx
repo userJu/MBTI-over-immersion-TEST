@@ -33,6 +33,7 @@ const Graph = ({ point, mbti, pointRange }) => {
   const per = (sameMbtiArr.length / sameRangeArr.length) * 100;
   return (
     <section className={styles.graph}>
+      <h2 className={styles.arrow}>⇊</h2>
       <button className={styles.openBtn} onClick={onClick}>
         수치 보기
       </button>
