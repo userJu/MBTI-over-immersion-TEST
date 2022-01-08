@@ -20,7 +20,7 @@ const Result = (props) => {
 
   const result = [
     {
-      res: "과몰입 검사결과 : 물아일체의 경지",
+      res: "물아일체의 경지",
       desc: `"오늘부로 MBTI에 대한 지지를 철회한다. 이 시간부로 지지관계에서 벗어나 MBTI와 나는 한몸으로 일체가 된다. MBTI에 대한 공격은 나에 대한 공격으로 간주한다"`,
       description: `다른 성격유형 검사는 몰라도 자신과 주변 사람들을 볼 때 MBTI는 정말 정확하다고 생각한다.
 다른 사람들을 만날 때 MBTI만 보고 판단하지는 않지만 자신도 모르게 MBTI와 상대방의 행동을 긴밀히 연결지어 생각하기도 한다.
@@ -36,7 +36,7 @@ MBTI에 비판적인 사람들이 봤을 때는 심한 과몰입으로 보일 �
 `,
     },
     {
-      res: "과몰입 검사결과 : 아침드라마 푹 빠진 어머니 형",
+      res: "아침드라마 푹 빠진 어머니 형",
       desc: `"어휴 내가 그럴 줄 알았어 얘, 너 INFP 맞다니까~!"`,
       description: `MBTI 검사를 100% 신뢰하지는 않지만 검사 결과는 다른 테스트들에 비해 비교적 정확하다고 생각한다.
 주변인들과 MBTI 이야기를 하는 것을 매우 좋아한다. MBTI에 대한 이해를 바탕으로 타인의 MBTI를 잘 알아맞춘다.
@@ -52,7 +52,7 @@ MBTI에 비판적인 사람들이 봤을 때는 심한 과몰입으로 보일 �
       `,
     },
     {
-      res: "과몰입 검사결과 : MBTI 알잘딱깔센",
+      res: "MBTI 알잘딱깔센",
       desc: "경증 과몰입러. 충분히 웃고 즐기고 맛보고 넘기기까지 완벽...",
       description: `본인의 MBTI가 맞다고 생각하고 타인들도 잘 들어맞는다고 생각한다. 
 필을 받으면 MBTI에 관련된 글이나 영상들을 열심히 찾아보지만 빠르게 식는다. 
@@ -66,7 +66,7 @@ E/I의 차이는 알아도 N/S의 차이를 잘 모르는 경우가 많은 이 �
       `,
     },
     {
-      res: "과몰입 검사결과 : 신조어 관심 많은 부장님",
+      res: "신조어 관심 많은 부장님",
       desc: `"아! 알아요 MBTI, 그 뭐더라...INFG였나!?"`,
       description: `MBTI에 관심은 있지만 아주 단편적이다.
 주변에서 한번 MBTI 검사를 해보라고 해서 알게 된 편.
@@ -81,7 +81,7 @@ MBTI가 유행하는 현상이 약간은 신기하게 느껴진다. 그러나 �
       `,
     },
     {
-      res: "과몰입 검사결과 :  MBTI 반대론자",
+      res: "MBTI 반대론자",
       desc: `"사람을 16 가지 유형으로 나누는 것은 불가능!"`,
       description: `MBTI에 관심이 없을 뿐더러 MBTI가 유행하는게 썩 마음에 들진 않는다.
 MBTI에 사람들이 왜 이렇게 열광하는지도 모르겠고 도리어 싫어할 수도 있다.
@@ -106,11 +106,16 @@ MBTI는 조금 더 정확한 혈액형 성격검사라고 생각하는 경우도
         {user}님의 MBTI 과몰입 정도는
         <hr />
       </h3>
-      <h2 className={styles.resultRes}>{paper.res}</h2>
+      <h2 className={styles.resultRes}>과몰입 검사결과 : {paper.res}</h2>
       <h3 className={styles.resultDesc}>{paper.desc}</h3>
       <h3 className={styles.resultDescription}>{paper.description}</h3>
 
-      <Graph point={point} pointRange={pointRange} mbti={mbti} />
+      <Graph
+        point={point}
+        pointRange={pointRange}
+        mbti={mbti}
+        result={paper.res}
+      />
     </section>
   );
 };
