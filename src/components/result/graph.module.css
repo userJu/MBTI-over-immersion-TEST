@@ -31,7 +31,9 @@ h2 {
 .testProgress {
   margin: 1.5rem;
 }
-
-.share {
-  width: 100%;
+.testPer {
+  font-size: 0.8rem;
+}
+.topFive {
+  margin-top: 0.5rem;
 }

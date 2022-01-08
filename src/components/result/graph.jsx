@@ -3,6 +3,7 @@ import { collection, addDoc, getDocs } from "firebase/firestore";
 import { app, db } from "../../fireB";
 import styles from "./graph.module.css";
 import Share from "../share/share";
+import GraphBar from "./graphBar";
 
 const Graph = ({ point, mbti, pointRange, result }) => {
   const [testArray, setTestArray] = useState([]); // 전체 test를 한 사람들의 모든 배열
@@ -28,6 +29,9 @@ const Graph = ({ point, mbti, pointRange, result }) => {
     setSameMbtiArr(sameMbti);
 
     setOpenRes(true);
+
+    // console.log(topFiveArr);
+    // console.log(topFiveArr[0]); // undefined. 순서문제가 발생하고 있다.
   };
 
   // 많이 나온 mbti를 5위까지 보여주기 위한 함수
@@ -56,7 +60,7 @@ const Graph = ({ point, mbti, pointRange, result }) => {
     console.log(topFive);
     setTopFiveArr(topFive);
   };
-  console.log(topFiveArr);
+
   const per = ((sameMbtiArr.length / sameRangeArr.length) * 100).toFixed(2);
   return (
     <section className={styles.graph}>
@@ -69,13 +73,14 @@ const Graph = ({ point, mbti, pointRange, result }) => {
           <h2 className={styles.testProgress}>
             지금까지 {testArray.length}명이 테스트를 진행했어요
           </h2>
-          <h3 className={styles.testPer}>
-            {result}이(가) 가장 많이 나온 MBTI
-            {mbti}유형의 사람들은 이 결과의 {per}% 입니다
-          </h3>
-          <div className={styles.share}>
-            <Share />
+          <div>
+            <h3 className={styles.testPer}>
+              [{result}]<h2 className={styles.topFive}>top5</h2>
+              <GraphBar topFiveArr={topFiveArr} />
+              {mbti}유형의 사람들은 {per}% 를 차지합니다
+            </h3>
           </div>
+          <Share />
         </div>
       )}
     </section>
