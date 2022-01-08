@@ -38,14 +38,12 @@ const Graph = ({ point, mbti, pointRange, result }) => {
   const showRank = (sameRange) => {
     let result = {};
     sameRange.forEach((rank) => {
-      console.log(rank.mbti);
       result[rank.mbti] = (result[rank.mbti] || 0) + 1;
     });
     let sortable = [];
     for (let mbti in result) {
       sortable.push([mbti, result[mbti]]);
     }
-    console.log(sortable);
     sortable.sort((a, b) => {
       return a[1] - b[1];
     });
@@ -77,6 +75,8 @@ const Graph = ({ point, mbti, pointRange, result }) => {
             <h3 className={styles.testPer}>
               [{result}]<h2 className={styles.topFive}>top5</h2>
               <GraphBar topFiveArr={topFiveArr} />
+            </h3>
+            <h3 className={styles.myMbtiPer}>
               {mbti}유형의 사람들은 {per}% 를 차지합니다
             </h3>
           </div>

@@ -32,3 +32,10 @@
 .fifth {
   background-color: #ffc6ff;
 }
+
+.valid {
+  margin: 1rem;
+}
+.noValid {
+  margin: 1rem;
+}
