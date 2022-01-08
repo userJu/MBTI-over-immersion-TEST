@@ -55,7 +55,6 @@ const Graph = ({ point, mbti, pointRange, result }) => {
       return (per[1] = ((per[1] / rangeLength) * 100).toFixed(2));
     });
 
-    console.log(topFive);
     setTopFiveArr(topFive);
   };
 
@@ -73,11 +72,11 @@ const Graph = ({ point, mbti, pointRange, result }) => {
           </h2>
           <div>
             <h3 className={styles.testPer}>
-              [{result}]<h2 className={styles.topFive}>top5</h2>
+              [{result}]<p className={styles.topFive}>top5</p>
               <GraphBar topFiveArr={topFiveArr} />
             </h3>
             <h3 className={styles.myMbtiPer}>
-              {mbti}유형의 사람들은 {per}% 를 차지합니다
+              {mbti}유형의 사람들은 {per}%에 해당됩니다
             </h3>
           </div>
           <Share />

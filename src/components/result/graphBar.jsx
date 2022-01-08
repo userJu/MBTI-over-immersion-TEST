@@ -4,8 +4,6 @@ import styles from "./graphBar.module.css";
 const GraphBar = ({ topFiveArr }) => {
   const [isValid, setIsValid] = useState(false);
   useEffect(() => {
-    console.log(topFiveArr.length);
-
     if (topFiveArr.length >= 5) {
       setIsValid(true);
     } else {
@@ -49,7 +47,7 @@ const GraphBar = ({ topFiveArr }) => {
         </>
       ) : (
         <h3 className={styles.noValid}>
-          유효한 수치가 만들어지지 않았습니다. 정확한 수치를 위해서 많이
+          유효한 수치가 등록되지 않았습니다. 정확한 수치를 위해서 많이
           공유해주세요
         </h3>
       )}
