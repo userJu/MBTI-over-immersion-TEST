@@ -67,11 +67,7 @@ const Share = (props) => {
           <img src={twitter} />
         </button>
       </ul>
-      <ins
-        data-ad-unit="DAN-ggNn69Fkbjecch6F"
-        data-ad-width="320"
-        data-ad-height="100"
-      ></ins>
+
       <button className={styles.againBtn} onClick={returnBtnClick}>
         다시 시작하기
       </button>
