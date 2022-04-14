@@ -10,13 +10,6 @@ const Result = (props) => {
   const point = location.state.point;
   const pointRange = location.state.pointRange;
   const mbti = location.state.mbti;
-  // 설명에 들어가야할 내용들
-  // 1. 본인이 MBTI를 대하는 태도
-  // 2. 인간관계에 MBTI가 미치는 영향
-  // 3. 인터넷에 돌아다니는 재미로하는
-  // MBTI 검사를 하는 빈도(빠짐없이 한다
-  // /찾아서 한다/친구가 보내주면 한다/안한다
-  // /친구가 링크를 보내면 욕한다)
 
   const result = [
     {

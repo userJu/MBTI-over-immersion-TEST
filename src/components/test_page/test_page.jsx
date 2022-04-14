@@ -86,11 +86,7 @@ const TestPage = () => {
       F: "그 의견에 대체로 동의하는 편이다",
     },
   };
-  // 이걸 찾느라 고생 조금 했지 useLocation()
-  //https://stackoverflow.com/questions/64566405/react-router-dom-v6-usenavigate-passing-value-to-another-component
-  //참고함
 
-  // name을 받아와서 testpage를 끝낸 다음 name을 보여주어야 한다
   const onClick = (e) => {
     setCurrentQ((prev) => prev + 1);
     if (currentQ < 15) {
