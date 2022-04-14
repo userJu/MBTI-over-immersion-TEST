@@ -69,9 +69,9 @@ const QMbti = () => {
         <div className={styles.mbti}>ENTJ</div>
       </div>
 
-      <button className={styles.resultBtn} onClick={onClick}>
+      <div className={`${styles.btn} ${styles.btn__primary}`} onClick={onClick}>
         결과 보기
-      </button>
+      </div>
     </section>
   );
 };

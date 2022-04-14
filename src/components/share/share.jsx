@@ -68,9 +68,12 @@ const Share = (props) => {
         </button>
       </ul>
 
-      <button className={styles.againBtn} onClick={returnBtnClick}>
+      <div
+        className={`${styles.btn} ${styles.btn__primary}`}
+        onClick={returnBtnClick}
+      >
         다시 시작하기
-      </button>
+      </div>
     </section>
   );
 };

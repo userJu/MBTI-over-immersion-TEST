@@ -40,15 +40,35 @@
   background: none;
 }
 
-.resultBtn {
-  outline: none;
-  border: none;
-  background-color: #f7bf20;
-  border-radius: 1rem;
-  width: 6rem;
-  height: 2rem;
-  margin-top: 1rem;
+.btn {
+  height: 2.5rem;
+  margin: 1.5rem;
   color: white;
   font-family: "Noto Sans KR", sans-serif;
   font-weight: bold;
+  width: 15rem;
+  border-radius: 1rem;
+  box-shadow: 0.3rem 0.3rem 0.6rem --greyLight-2;
+  justify-self: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+.btn__primary {
+  grid-column: 1 / 2;
+  grid-row: 4 / 5;
+  background: --primary;
+  box-shadow: inset 0.2rem 0.2rem 1rem --primary-light,
+    inset -0.2rem -0.2rem 1rem --primary-dark,
+    0.3rem 0.3rem 0.6rem --greyLight-2;
+  color: --greyLight-1;
+}
+.btn__primary:hover {
+  color: --white;
+}
+.btn__primary:active {
+  box-shadow: inset 0.2rem 0.2rem 1rem --primary-dark,
+    inset -0.2rem -0.2rem 1rem --primary-light;
 }

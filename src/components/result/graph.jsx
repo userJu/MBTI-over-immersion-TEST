@@ -54,6 +54,7 @@ const Graph = ({ point, mbti, pointRange, result }) => {
     topFive.map((per) => {
       return (per[1] = ((per[1] / rangeLength) * 100).toFixed(2));
     });
+    console.log(topFive);
 
     setTopFiveArr(topFive);
   };
@@ -61,8 +62,10 @@ const Graph = ({ point, mbti, pointRange, result }) => {
   const per = ((sameMbtiArr.length / sameRangeArr.length) * 100).toFixed(2);
   return (
     <section className={styles.graph}>
-      <h2 className={styles.arrow}>⇊</h2>
-      <button className={styles.openBtn} onClick={onClick}>
+      <button
+        className={`${styles.btn} ${styles.btn__primary}`}
+        onClick={onClick}
+      >
         수치 보기
       </button>
       {openRes && (
