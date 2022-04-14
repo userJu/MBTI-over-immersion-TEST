@@ -30,7 +30,9 @@ const Home = (props) => {
           type="text"
           placeholder="이름을 적어주세요"
         />
-        <button className={styles.button}>START</button>
+        <button className={styles.btn + " " + styles.btn__primary}>
+          START
+        </button>
       </form>
     </section>
   );

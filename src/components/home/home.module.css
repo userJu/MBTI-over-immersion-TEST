@@ -1,8 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap");
+@value --greyLight-1,--greyLight-2 , --white , --primary,--primary-light,--primary-dark from '../../common/colors.css';
 
 .home {
   width: 90%;
-  height: 100vh;
+  height: 75vh;
+  margin: 2rem 0;
+  border-radius: 3rem;
+  box-shadow: 0.8rem 0.8rem 1.4rem --greyLight-2, -0.2rem -0.2rem 1.8rem --white;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -20,24 +24,46 @@
 .input {
   border: none;
   outline: none;
-  border-bottom: 3px solid #c5ffd5;
+  border-bottom: 2px solid --primary;
   height: 2rem;
   background-color: transparent;
   font-size: 1.2rem;
   font-family: "Noto Sans KR", sans-serif;
-  color: #f7bf20;
+  color: --primary-dark;
   text-align: center;
 }
-.button {
-  border: none;
-  outline: none;
-  border: 2px solid #c5ffd5;
+
+.btn {
   height: 2.5rem;
   margin: 1.5rem;
-  background-color: #f7bf20;
   color: white;
   font-family: "Noto Sans KR", sans-serif;
   font-weight: bold;
+  width: 15rem;
+  border-radius: 1rem;
+  box-shadow: 0.3rem 0.3rem 0.6rem --greyLight-2;
+  justify-self: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+.btn__primary {
+  grid-column: 1 / 2;
+  grid-row: 4 / 5;
+  background: --primary;
+  box-shadow: inset 0.2rem 0.2rem 1rem --primary-light,
+    inset -0.2rem -0.2rem 1rem --primary-dark,
+    0.3rem 0.3rem 0.6rem --greyLight-2;
+  color: --greyLight-1;
+}
+.btn__primary:hover {
+  color: --white;
+}
+.btn__primary:active {
+  box-shadow: inset 0.2rem 0.2rem 1rem --primary-dark,
+    inset -0.2rem -0.2rem 1rem --primary-light;
 }
 .kakao_ad_area {
   display: none;

@@ -44,8 +44,7 @@ const QMbti = () => {
   const chooseMbtiBox = (e) => {
     if (e.target.id !== "mbtiBox") {
       setMbti(e.target.innerHTML);
-    } else {
-      return;
+      e.target.classList.add(`${styles.active}`);
     }
   };
   return (

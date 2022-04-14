@@ -1,8 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap");
+@value --greyLight-1 from './common/colors.css';
+
 body {
   margin: 0;
-  background-color: #54be9f;
   font-family: "Noto Sans KR", sans-serif;
+  background: --greyLight-1;
 }
 * {
   box-sizing: border-box;

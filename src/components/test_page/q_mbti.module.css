@@ -1,19 +1,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap");
+@value --greyLight-1,--greyLight-2,--greyDark,--greyVeryDark, --white , --primary,--primary-light,--primary-dark from '../../common/colors.css';
 
 .QMbti {
   width: 90%;
-  height: 100vh;
+  height: 75vh;
+  margin: 2rem 0;
+  border-radius: 3rem;
+  box-shadow: 0.8rem 0.8rem 1.4rem --greyLight-2, -0.2rem -0.2rem 1.8rem --white;
   display: flex;
-  position: relative;
   flex-direction: column;
   align-items: center;
-  text-align: center;
   justify-content: center;
-  background-color: #54be9f;
   position: relative;
 }
 .desc {
-  color: #c5ffd5;
+  color: --greyVeryDark;
 }
 
 .mbtiBox {
@@ -23,7 +24,7 @@
   margin-bottom: 2rem;
 }
 .mbti {
-  background-color: #c5ffd5;
+  box-shadow: 0.3rem 0.3rem 0.6rem --greyLight-2, -0.2rem -0.2rem 0.5rem --white;
   margin: 0.2rem;
   display: flex;
   align-items: center;
@@ -32,11 +33,11 @@
   font-weight: bold;
   cursor: pointer;
 }
-.mbti:hover {
-  background-color: #78d191;
-}
-.actived {
-  width: 200px;
+
+.active {
+  box-shadow: inset 0.2rem 0.2rem 0.5rem --greyLight-2,
+    inset -0.2rem -0.2rem 0.5rem --white;
+  background: none;
 }
 
 .resultBtn {

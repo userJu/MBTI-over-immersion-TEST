@@ -1,21 +1,28 @@
+@value --greyLight-1,--greyLight-2,--greyDark,--greyVeryDark, --white , --primary,--primary-light,--primary-dark from '../../common/colors.css';
+
 .test {
   width: 90%;
-  height: 100vh;
+  height: 75vh;
+  margin: 2rem 0;
+  border-radius: 3rem;
+  box-shadow: 0.8rem 0.8rem 1.4rem --greyLight-2, -0.2rem -0.2rem 1.8rem --white;
   display: flex;
-  position: relative;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #54be9f;
+  position: relative;
 }
 .progress {
   position: absolute;
   top: 1rem;
-  color: #c5ffd5;
+  color: --greyDark;
 }
 .questionBox {
-  border: 0.5px solid black;
-  background-color: #c5ffd5;
+  box-shadow: inset 0.2rem 0.2rem 0.5rem --greyLight-2,
+    inset -0.2rem -0.2rem 0.5rem --white;
+  background: none;
+  font-family: inherit;
+  color: --greyVeryDark;
   border-radius: 1rem;
   padding: 1rem;
   width: 90%;
@@ -37,10 +44,38 @@
 .btn {
   outline: none;
   border: none;
-  border-radius: 1rem;
-  background-color: #f7bf20;
+  border-radius: 5px;
   color: white;
   font-weight: bold;
   width: 100%;
   height: 40%;
+  position: relative;
+  background-color: --primary;
+  background-image: linear-gradient(315deg, --primary 0%, --primary-dark 54%);
+  z-index: 1;
+}
+.btn:after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  border-radius: 5px;
+  background-color: --primary-dark;
+  background-image: linear-gradient(315deg, --primary-dark 0%, --primary 74%);
+  box-shadow: -7px -7px 20px 0px #fff9, -4px -4px 5px 0px #fff9,
+    7px 7px 20px 0px #0002, 4px 4px 5px 0px #0001;
+  transition: all 0.3s ease;
+}
+.btn:hover {
+  color: #fff;
+}
+.btn:hover:after {
+  top: 0;
+  height: 100%;
+}
+.btn:active {
+  top: 2px;
 }
