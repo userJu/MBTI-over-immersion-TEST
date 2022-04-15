@@ -1,6 +1,15 @@
 import React, { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import { collection, addDoc, getDocs } from "firebase/firestore";
+import {
+  collection,
+  addDoc,
+  doc,
+  getDocs,
+  getDoc,
+  setDoc,
+  updateDoc,
+  arrayUnion,
+} from "firebase/firestore";
 import { app, db } from "../../fireB";
 import styles from "./q_mbti.module.css";
 import KakaoAd from "../ad/kakaoAdFooter";
@@ -27,6 +36,13 @@ const QMbti = () => {
     }
   }, []);
 
+  const chooseMbtiBox = (e) => {
+    if (e.target.id !== "mbtiBox") {
+      setMbti(e.target.innerHTML);
+      e.target.classList.add(`${styles.active}`);
+    }
+  };
+
   const onClick = async () => {
     if (mbti === "") {
       alert("MBTI를 선택해주세요");
@@ -34,19 +50,17 @@ const QMbti = () => {
       navigate("/result", {
         state: { user, point, pointRange, mbti },
       });
-      const docRef = await addDoc(collection(db, "results"), {
-        mbti,
-        point,
-        Range: pointRange,
+      await updateDoc(doc(db, "userResults", "resultArr"), {
+        resultArr: arrayUnion({
+          mbti,
+          point,
+          Range: pointRange,
+          id: Date.now(),
+        }),
       });
     }
   };
-  const chooseMbtiBox = (e) => {
-    if (e.target.id !== "mbtiBox") {
-      setMbti(e.target.innerHTML);
-      e.target.classList.add(`${styles.active}`);
-    }
-  };
+
   return (
     <section className={styles.QMbti}>
       <h1 className={styles.desc}>what is {user}'s mbti?</h1>
@@ -68,7 +82,6 @@ const QMbti = () => {
         <div className={styles.mbti}>ENFJ</div>
         <div className={styles.mbti}>ENTJ</div>
       </div>
-
       <div className={`${styles.btn} ${styles.btn__primary}`} onClick={onClick}>
         결과 보기
       </div>
