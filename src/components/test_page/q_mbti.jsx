@@ -10,6 +10,7 @@ const QMbti = () => {
   const location = useLocation();
   const navigate = useNavigate();
   const [mbti, setMbti] = useState("");
+  const [mbtiClassList, setMbtiClassList] = useState("");
   const [pointRange, setPointRange] = useState("");
   const user = location.state.user;
   const point = location.state.point;
@@ -29,7 +30,11 @@ const QMbti = () => {
 
   const chooseMbtiBox = (e) => {
     if (e.target.id !== "mbtiBox") {
+      if (mbtiClassList !== "") {
+        mbtiClassList.remove(`${styles.active}`);
+      }
       setMbti(e.target.innerHTML);
+      setMbtiClassList(e.target.classList);
       e.target.classList.add(`${styles.active}`);
     }
   };
