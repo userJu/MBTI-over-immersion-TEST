@@ -6,23 +6,6 @@ import link from "../../images/linkBtn.jpg";
 import { useNavigate } from "react-router-dom";
 
 const Share = (props) => {
-  // 여기서부터는 그냥 Kakao가 아니라 window.Kakao가 되어야 한다
-
-  // useEffect(() => {
-  //   kakaoBtnClick();
-  // }, []);
-
-  // container: "#kakaoLinkBtn", // id를 가지고 온다 #로
-  // objectType: "feed",
-  // content: {
-  //   title: "MBTI 과몰입 테스트",
-  //   description: "#MBTI #Mbti과몰입 #과몰입테스트 #mbti테스트",
-  //   imageUrl: "imageurl",
-  //   link: {
-  //     mobileWebUrl: "https://userju.github.io/MBTI-over-immersion-TEST/",
-  //     webUrl: "https://userju.github.io/MBTI-over-immersion-TEST/",
-  //   },
-  // },
   const kakaoBtnClick = () => {
     window.Kakao.Link.sendCustom({
       templateId: 68225,
@@ -56,17 +39,17 @@ const Share = (props) => {
     <section className={styles.share}>
       <h1 className={styles.name}>share link!</h1>
       <h3 className={styles.desc}>공유할수록 수치는 정확해집니다</h3>
-      <ul className={styles.linkBox}>
-        <button className={styles.kakao} onClick={kakaoBtnClick}>
+      <div className={styles.lineIconContainer}>
+        <div className={styles.icon_kakao} onClick={kakaoBtnClick}>
           <img src={kakao} />
-        </button>
-        <button className={styles.link} onClick={linkBtnClick}>
+        </div>
+        <div className={styles.icon_link} onClick={linkBtnClick}>
           <img src={link} />
-        </button>
-        <button className={styles.twitter} onClick={twitterBtnClick}>
+        </div>
+        <div className={styles.icon_twitter} onClick={twitterBtnClick}>
           <img src={twitter} />
-        </button>
-      </ul>
+        </div>
+      </div>
 
       <div
         className={`${styles.btn} ${styles.btn__primary}`}

@@ -123,7 +123,6 @@ const TestPage = () => {
           {questionBox[currentQ].F}
         </button>
       </div>
-      <KakaoAd />
     </section>
   );
 };

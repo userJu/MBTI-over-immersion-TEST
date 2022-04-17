@@ -101,7 +101,9 @@ MBTI는 조금 더 정확한 혈액형 성격검사라고 생각하는 경우도
       <h2 className={styles.resultRes}>과몰입 검사결과 : {paper.res}</h2>
       <h3 className={styles.resultDesc}>{paper.desc}</h3>
       <h3 className={styles.resultDescription}>{paper.description}</h3>
-
+      {/* <h2 className={styles.testProgress}>
+        지금까지 testArray.length명이 테스트를 진행했어요
+      </h2> */}
       <Graph
         point={point}
         pointRange={pointRange}

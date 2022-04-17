@@ -1,16 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import {
-  collection,
-  addDoc,
-  doc,
-  getDocs,
-  getDoc,
-  setDoc,
-  updateDoc,
-  arrayUnion,
-} from "firebase/firestore";
-import { app, db } from "../../fireB";
+import { doc, updateDoc, arrayUnion } from "firebase/firestore";
+import { db } from "../../fireB";
 import styles from "./q_mbti.module.css";
 import KakaoAd from "../ad/kakaoAdFooter";
 import KakaoAdMobile from "../ad/kakaoAdMobile";
