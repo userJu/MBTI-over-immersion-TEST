@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/MBTI-over-immersion-TEST/static/css/main.64ba36ef.css",
-    "main.js": "/MBTI-over-immersion-TEST/static/js/main.1646fdd9.js",
+    "main.css": "/MBTI-over-immersion-TEST/static/css/main.69030cec.css",
+    "main.js": "/MBTI-over-immersion-TEST/static/js/main.92e72aec.js",
     "static/media/kakaoBtn.jpg": "/MBTI-over-immersion-TEST/static/media/kakaoBtn.840e6d4d823af7cc360e.jpg",
     "static/media/twitterBtn.png": "/MBTI-over-immersion-TEST/static/media/twitterBtn.b3e6affd049e1e4cc045.png",
     "static/media/linkBtn.jpg": "/MBTI-over-immersion-TEST/static/media/linkBtn.9a50b75001600a3f8038.jpg",
     "index.html": "/MBTI-over-immersion-TEST/index.html",
-    "main.64ba36ef.css.map": "/MBTI-over-immersion-TEST/static/css/main.64ba36ef.css.map",
-    "main.1646fdd9.js.map": "/MBTI-over-immersion-TEST/static/js/main.1646fdd9.js.map"
+    "main.69030cec.css.map": "/MBTI-over-immersion-TEST/static/css/main.69030cec.css.map",
+    "main.92e72aec.js.map": "/MBTI-over-immersion-TEST/static/js/main.92e72aec.js.map"
   },
   "entrypoints": [
-    "static/css/main.64ba36ef.css",
-    "static/js/main.1646fdd9.js"
+    "static/css/main.69030cec.css",
+    "static/js/main.92e72aec.js"
   ]
 }
