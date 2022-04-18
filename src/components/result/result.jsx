@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import Graph from "./graph";
 import styles from "./result.module.css";
 
-const Result = (props) => {
+const Result = () => {
   const location = useLocation();
+  const navigate = useNavigate();
   const [paper, setPaper] = useState("");
-  const user = location.state.user;
-  const point = location.state.point;
-  const pointRange = location.state.pointRange;
-  const mbti = location.state.mbti;
+  const user = location.state && location.state.user;
+  const pointRange = location.state && location.state.pointRange;
+  const mbti = location.state && location.state.mbti;
 
   const result = [
     {
@@ -89,6 +89,9 @@ MBTI는 조금 더 정확한 혈액형 성격검사라고 생각하는 경우도
     },
   ];
   useEffect(() => {
+    if (location.state === null) {
+      navigate("/");
+    }
     setPaper(result[pointRange * 1 - 1]);
   }, []);
 

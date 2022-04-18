@@ -10,21 +10,8 @@ const QMbti = () => {
   const [mbti, setMbti] = useState("");
   const [mbtiClassList, setMbtiClassList] = useState("");
   const [pointRange, setPointRange] = useState("");
-  const user = location.state.user;
-  const point = location.state.point;
-  useEffect(() => {
-    if (point >= 10) {
-      setPointRange(1);
-    } else if (point > 3) {
-      setPointRange(2);
-    } else if (point >= -3) {
-      setPointRange(3);
-    } else if (point > -10) {
-      setPointRange(4);
-    } else {
-      setPointRange(5);
-    }
-  }, []);
+  const user = location.state && location.state.user;
+  const point = location.state && location.state.point;
 
   const chooseMbtiBox = (e) => {
     if (e.target.id !== "mbtiBox") {
@@ -54,6 +41,26 @@ const QMbti = () => {
       });
     }
   };
+
+  useEffect(() => {
+    if (point >= 10) {
+      setPointRange(1);
+    } else if (point > 3) {
+      setPointRange(2);
+    } else if (point >= -3) {
+      setPointRange(3);
+    } else if (point > -10) {
+      setPointRange(4);
+    } else {
+      setPointRange(5);
+    }
+  }, []);
+
+  useEffect(() => {
+    if (location.state === null) {
+      navigate("/");
+    }
+  }, []);
 
   return (
     <section className={styles.QMbti}>
