@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import AppRouter from "../../router";
-import TestPage from "../test_page/test_page";
 import styles from "./home.module.css";
 
 const Home = (props) => {
@@ -30,7 +28,7 @@ const Home = (props) => {
           type="text"
           placeholder="이름을 적어주세요"
         />
-        <button className={styles.btn + " " + styles.btn__primary}>
+        <button className={`${styles.btn} ${styles.btn__primary}`}>
           START
         </button>
       </form>

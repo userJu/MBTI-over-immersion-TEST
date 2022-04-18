@@ -3,8 +3,6 @@ import { useLocation, useNavigate } from "react-router-dom";
 import { doc, updateDoc, arrayUnion } from "firebase/firestore";
 import { db } from "../../fireB";
 import styles from "./q_mbti.module.css";
-import KakaoAd from "../ad/kakaoAdFooter";
-import KakaoAdMobile from "../ad/kakaoAdMobile";
 
 const QMbti = () => {
   const location = useLocation();
@@ -39,7 +37,7 @@ const QMbti = () => {
     }
   };
 
-  const onClick = async () => {
+  const onClickToResult = async () => {
     if (mbti === "") {
       alert("MBTI를 선택해주세요");
     } else {
@@ -78,7 +76,10 @@ const QMbti = () => {
         <div className={styles.mbti}>ENFJ</div>
         <div className={styles.mbti}>ENTJ</div>
       </div>
-      <div className={`${styles.btn} ${styles.btn__primary}`} onClick={onClick}>
+      <div
+        className={`${styles.btn} ${styles.btn__primary}`}
+        onClick={onClickToResult}
+      >
         결과 보기
       </div>
     </section>

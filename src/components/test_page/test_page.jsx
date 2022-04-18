@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import KakaoAd from "../ad/kakaoAdFooter";
 import styles from "./test_page.module.css";
 
 const TestPage = () => {
@@ -87,7 +86,7 @@ const TestPage = () => {
     },
   };
 
-  const onClick = (e) => {
+  const clickUserAnsw = (e) => {
     setCurrentQ((prev) => prev + 1);
     if (currentQ < 15) {
       if (e.target.value === "O") {
@@ -116,10 +115,10 @@ const TestPage = () => {
       </div>
 
       <div className={styles.btns}>
-        <button className={styles.btn} onClick={onClick} value={"O"}>
+        <button className={styles.btn} onClick={clickUserAnsw} value={"O"}>
           {questionBox[currentQ].T}
         </button>
-        <button className={styles.btn} onClick={onClick} value={"X"}>
+        <button className={styles.btn} onClick={clickUserAnsw} value={"X"}>
           {questionBox[currentQ].F}
         </button>
       </div>

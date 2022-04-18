@@ -1,6 +1,6 @@
 @value --greyLight-1,--greyLight-2,--greyDark,--greyVeryDark, --white , --primary,--primary-light,--primary-dark from '../../common/colors.css';
 
-.result {
+.resultContainer {
   width: 90%;
   height: auto;
   margin: 2rem 0;
@@ -13,10 +13,10 @@
   position: relative;
 }
 
-.resultIntro {
+.resultHeader {
   text-align: center;
   font-size: 1rem;
-  margin-top: 3rem;
+  margin-top: 1rem;
 }
 .resultRes {
   margin: 1rem;
@@ -30,8 +30,9 @@
   color: --greyVeryDark;
   border-radius: 1rem;
   padding: 1rem;
-  width: 90%;
+  max-width: 90%;
   min-height: 40%;
+  margin: 1.5rem;
 }
 .resultDescription {
   white-space: pre-wrap;

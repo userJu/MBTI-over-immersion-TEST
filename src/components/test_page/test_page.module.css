@@ -69,13 +69,11 @@
     7px 7px 20px 0px #0002, 4px 4px 5px 0px #0001;
   transition: all 0.3s ease;
 }
-.btn:hover {
+.btn:active {
   color: #fff;
+  top: 2px;
 }
-.btn:hover:after {
+.btn:active:after {
   top: 0;
   height: 100%;
-}
-.btn:active {
-  top: 2px;
 }

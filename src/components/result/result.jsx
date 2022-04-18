@@ -93,23 +93,16 @@ MBTI는 조금 더 정확한 혈액형 성격검사라고 생각하는 경우도
   }, []);
 
   return (
-    <section className={styles.result}>
-      <h3 className={styles.resultIntro}>
+    <section className={styles.resultContainer}>
+      <h1 style={{ fontSize: "2rem" }}>🥳</h1>
+      <h3 className={styles.resultHeader}>
         {user}님의 MBTI 과몰입 정도는
         <hr />
       </h3>
       <h2 className={styles.resultRes}>과몰입 검사결과 : {paper.res}</h2>
       <h3 className={styles.resultDesc}>{paper.desc}</h3>
       <h3 className={styles.resultDescription}>{paper.description}</h3>
-      {/* <h2 className={styles.testProgress}>
-        지금까지 testArray.length명이 테스트를 진행했어요
-      </h2> */}
-      <Graph
-        point={point}
-        pointRange={pointRange}
-        mbti={mbti}
-        result={paper.res}
-      />
+      <Graph pointRange={pointRange} mbti={mbti} />
     </section>
   );
 };
