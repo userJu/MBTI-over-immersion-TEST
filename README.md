@@ -32,4 +32,4 @@
   - 같은 결과가 나온 사람들의 mbti 비율 top5
   - 공유하기 버튼
 
-* [MBTI 과몰입 테스트 링크](https://userju.github.io/MBTI-over-immersion-TEST/#/)
+* [MBTI 과몰입 테스트 링크](https://userju.github.io/MBTI-over-immersion-TEST/)
