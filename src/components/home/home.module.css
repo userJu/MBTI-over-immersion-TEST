@@ -20,6 +20,7 @@
   display: flex;
   flex-direction: column;
   margin-top: 2rem;
+  max-width: 90%;
 }
 .input {
   border: none;
@@ -41,10 +42,9 @@
   color: white;
   font-family: "Noto Sans KR", sans-serif;
   font-weight: bold;
-  width: 15rem;
+  max-width: 15rem;
   border-radius: 1rem;
   box-shadow: 0.3rem 0.3rem 0.6rem --greyLight-2;
-  justify-self: center;
   display: flex;
   align-items: center;
   justify-content: center;

@@ -13,6 +13,26 @@ const QMbti = () => {
   const user = location.state && location.state.user;
   const point = location.state && location.state.point;
 
+  const isAccecedOutsideLink = () => {
+    if (location.state === null) {
+      navigate("/");
+    }
+  };
+
+  const calcPointRange = () => {
+    if (point >= 10) {
+      setPointRange(1);
+    } else if (point > 3) {
+      setPointRange(2);
+    } else if (point >= -3) {
+      setPointRange(3);
+    } else if (point > -10) {
+      setPointRange(4);
+    } else {
+      setPointRange(5);
+    }
+  };
+
   const chooseMbtiBox = (e) => {
     if (e.target.id !== "mbtiBox") {
       if (mbtiClassList !== "") {
@@ -43,23 +63,8 @@ const QMbti = () => {
   };
 
   useEffect(() => {
-    if (point >= 10) {
-      setPointRange(1);
-    } else if (point > 3) {
-      setPointRange(2);
-    } else if (point >= -3) {
-      setPointRange(3);
-    } else if (point > -10) {
-      setPointRange(4);
-    } else {
-      setPointRange(5);
-    }
-  }, []);
-
-  useEffect(() => {
-    if (location.state === null) {
-      navigate("/");
-    }
+    isAccecedOutsideLink();
+    calcPointRange();
   }, []);
 
   return (

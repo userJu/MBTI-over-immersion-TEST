@@ -86,7 +86,7 @@ const TestPage = () => {
     },
   };
 
-  const clickUserAnsw = (e) => {
+  const clickUserAnswr = (e) => {
     setCurrentQ((prev) => prev + 1);
     if (currentQ < 15) {
       if (e.target.value === "O") {
@@ -118,10 +118,10 @@ const TestPage = () => {
       </div>
 
       <div className={styles.btns}>
-        <button className={styles.btn} onClick={clickUserAnsw} value={"O"}>
+        <button className={styles.btn} onClick={clickUserAnswr} value={"O"}>
           {questionBox[currentQ].T}
         </button>
-        <button className={styles.btn} onClick={clickUserAnsw} value={"X"}>
+        <button className={styles.btn} onClick={clickUserAnswr} value={"X"}>
           {questionBox[currentQ].F}
         </button>
       </div>
