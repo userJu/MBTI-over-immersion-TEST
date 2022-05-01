@@ -18,10 +18,17 @@
 
 ## 📚 사용 기술
 
+#### 주 사용 기술
+
 - React
 - PostCss
+- Firebase
 
-## 기능
+#### 라이브러리
+
+- React Router
+
+## 🕹 기능
 
 - 유저의 답변을 기반으로 결과를 도출한다
 - firebase를 이용해 유저의 결과를 저장한다
@@ -33,7 +40,7 @@
   - 같은 결과가 나온 사람들의 mbti 비율
   - 공유하기 버튼
 
-## 스크린샷
+## 📸 스크린샷
 
 - 시작 페이지
   <img max-width="80%" src="https://user-images.githubusercontent.com/87933367/166129279-448e295e-b0fe-4af9-a685-aa9ac8b1eb37.PNG">
